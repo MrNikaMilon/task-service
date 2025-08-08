@@ -1,0 +1,32 @@
+# Ignore Git files
+.git
+.gitignore
+
+# Ignore build files
+.gradle
+target
+out
+
+# Ignore IDE configs
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Ignore logs and temp
+logs
+*.log
+tmp
+*.tmp
+
+# Ignore local environment files
+.env
+.env.*
+
+# Ignore Liquibase local config
+liquibase.*
+*.properties
+
+# Ignore node modules (if frontend present)
+node_modules
+dist

@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-task-user-constratint
+      author: nion
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: tasks
+            constraintName: FK_TASKS_ON_USER
+            referencedColumnNames: user_id
+            referencedTableName: users

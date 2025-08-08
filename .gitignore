@@ -1,0 +1,55 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+.idea_modules/
+*.ipr
+*.iws
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Logs
+logs/
+*.log
+*.tmp
+
+# Spring Boot specific
+target/
+bin/
+tmp/
+*.pid
+
+# Kotlin/Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Environment
+.env
+.env.*
+!env.example
+
+# Liquibase temp files
+liquibase.*
+*.properties
+
+# Coverage reports
+coverage/
+*.lcov
+*.hprof
+
+# Node (if frontend present in repo)
+node_modules/
+dist/
+
+# Others
+*.swp
+*.swo

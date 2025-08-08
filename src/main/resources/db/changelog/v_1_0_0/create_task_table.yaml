@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-task-table
+      author: nion
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_tasks
+                  name: task_id
+                  type: UUID
+              - column:
+                  name: task_name
+                  type: VARCHAR(255)
+              - column:
+                  name: task_description
+                  type: VARCHAR(255)
+              - column:
+                  name: task_status
+                  type: VARCHAR(255)
+              - column:
+                  name: user_id
+                  type: UUID
+            tableName: tasks

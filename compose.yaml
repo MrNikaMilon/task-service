@@ -1,0 +1,27 @@
+version: '3.0'
+services:
+  database:
+    image: 'postgres:16'
+    container_name: task-tracker-db
+    environment:
+      - 'POSTGRES_DB=${DB_URL:-task-db}'
+      - 'POSTGRES_USER=${DB_USER:-admin}'
+      - 'POSTGRES_PASSWORD=${DB_PASSWORD:-admin}'
+    ports:
+      - '5436:5432'
+    networks:
+      - app-network
+
+  task-service:
+    image: task-service:1.0
+    container_name: task-service-api
+    depends_on:
+      - database
+    environment:
+      DB_URL: jdbc:postgresql://database:5432/task-db
+      DB_USER: admin
+      DB_PASSWORD: admin
+    networks:
+      - app-network
+networks:
+  app-network:
