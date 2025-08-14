@@ -20,8 +20,34 @@ databaseChangeLog:
                   name: task_description
                   type: VARCHAR(255)
               - column:
+                  name: task_priority
+                  type: VARCHAR(255)
+              - column:
+                  name: task_type
+                  type: VARCHAR(255)
+              - column:
                   name: task_status
                   type: VARCHAR(255)
+              - column:
+                  name: auto_complete
+                  type: BOOLEAN
+                  defaultValueBoolean: false
+              - column:
+                  name: date_start
+                  type: TIMESTAMP
+                  defaultValueDate: CURRENT_TIMESTAMP
+              - column:
+                  name: date_end
+                  type: TIMESTAMP
+                  defaultValueDate: CURRENT_TIMESTAMP
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueDate: CURRENT_TIMESTAMP
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  defaultValueDate: CURRENT_TIMESTAMP
               - column:
                   name: user_id
                   type: UUID

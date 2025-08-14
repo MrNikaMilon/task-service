@@ -8,10 +8,10 @@ import java.time.LocalDateTime
 data class TaskCreateRequest(
     var name: String,
     var description: String,
-    var dateStart: LocalDateTime,
-    var dateEnd: LocalDateTime,
     var priority: TaskPriority,
     var status: TaskStatus,
     var type: TaskType,
-    var autoComplete: Boolean
+    var autoComplete: Boolean,
+    var dateStart: LocalDateTime,
+    var dateEnd: LocalDateTime
 ) { }
