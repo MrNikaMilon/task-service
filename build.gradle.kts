@@ -7,6 +7,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.7"
     id("com.google.protobuf") version "0.9.4"
     kotlin("plugin.jpa") version "1.9.25"
+    kotlin("kapt") version "1.9.25"
 }
 
 group = "com.nion"
@@ -42,6 +43,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.liquibase:liquibase-core")
     implementation("org.springframework.grpc:spring-grpc-server-web-spring-boot-starter")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.0")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-docker-compose")
     runtimeOnly("org.postgresql:postgresql")
@@ -55,6 +57,11 @@ dependencies {
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:postgresql")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    kapt("org.mapstruct:mapstruct-processor:1.5.5.Final")
+}
+
+kapt {
+    correctErrorTypes = true
 }
 
 dependencyManagement {
